@@ -1,0 +1,14 @@
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\bin\Debug\net8.0\EjercicioBackEnd.exe
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\bin\Debug\net8.0\EjercicioBackEnd.deps.json
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\bin\Debug\net8.0\EjercicioBackEnd.runtimeconfig.json
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\bin\Debug\net8.0\EjercicioBackEnd.dll
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\bin\Debug\net8.0\EjercicioBackEnd.pdb
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.AssemblyInfoInputs.cache
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.AssemblyInfo.cs
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.csproj.CoreCompileInputs.cache
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.dll
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\refint\EjercicioBackEnd.dll
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.pdb
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.genruntimeconfig.cache
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\ref\EjercicioBackEnd.dll
