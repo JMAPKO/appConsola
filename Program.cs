@@ -117,6 +117,23 @@ class Alumnos<T> where T : Alumno
     }
 }
 
+//CLASES para LINQ
+public class Alumnox
+{
+    public int Id { get; set; }
+    public string Nom { get; set; }
+    public int Nota { get; set; }
+    public int IdCurso { get; set; }
+}
+
+public class Curso
+{
+    public int Id { get; set; }
+    public string NombreCurso { get; set; }
+}
+
+
+
 
 
 
@@ -156,59 +173,142 @@ public class Program
         Console.WriteLine($"cantidad de alumnos: {listaAlumnos.CantidadAlumnos}");
 
 
+        
         //EJERCICIOS LAMBDAS
-        Console.WriteLine("\n-------------------------\n");
-
-        void Calculadora(Func<int, int, int> Calc, int numb1, int numb2)
         {
-            var result = Calc(numb1, numb2);
-            Console.WriteLine($"El resultado de la operacion es: {result}");
-        }
+            Console.WriteLine("\n-------------------------\n");
 
-        Calculadora((a, b) => a + b, 10, 5);
-        Calculadora((a, b) => a - b, 100, 20);
-        Calculadora((a, b) => a * b, 7, 8);
-        Console.WriteLine("\n-------------------------\n");
-
-        {
-
-            void CambiarNombres(Func<List<string>, List<string>> fn, List<string> list)
+            void Calculadora(Func<int, int, int> Calc, int numb1, int numb2)
             {
-                var mayuscula = fn(list);
-                Console.WriteLine($"Los nombres en mayuscula son: {string.Join(",", mayuscula)}");
+                var result = Calc(numb1, numb2);
+                Console.WriteLine($"El resultado de la operacion es: {result}");
             }
 
-            List<string> nombres = new List<string> { "franco", "juan", "pedro", "maria" };
+            Calculadora((a, b) => a + b, 10, 5);
+            Calculadora((a, b) => a - b, 100, 20);
+            Calculadora((a, b) => a * b, 7, 8);
+            Console.WriteLine("\n-------------------------\n");
 
-            var Mayus = (List<string> list) => list.Select(m => m.ToUpper()).ToList();
+            {
 
-            CambiarNombres(Mayus, nombres);
+                void CambiarNombres(Func<List<string>, List<string>> fn, List<string> list)
+                {
+                    var mayuscula = fn(list);
+                    Console.WriteLine($"Los nombres en mayuscula son: {string.Join(",", mayuscula)}");
+                }
+
+                List<string> nombres = new List<string> { "franco", "juan", "pedro", "maria" };
+
+                var Mayus = (List<string> list) => list.Select(m => m.ToUpper()).ToList();
+
+                CambiarNombres(Mayus, nombres);
+            }
+
+            Console.WriteLine("\n-------------------------\n");
+
+            void TransformarLista(List<string> original, Func<string, string> reglaDeTransformacion)
+            {
+                List<string> new_list = new List<string>();
+                foreach (var item in original)
+                {
+                    new_list.Add(reglaDeTransformacion(item));
+                }
+                Console.WriteLine($"Lista de modificada: {string.Join(", ", new_list)}");
+            }
+            List<string> nombres2 = new List<string> { "franco", "juan", "pedro", "maria" };
+            //mayuscula
+            var grande = (string s) => s.ToUpper();
+
+            //agregar sr.
+            var titulo = (string s) => $"Sr. {s}";
+
+            //dejar invertido
+            var invertir = (string s) => new string(s.Reverse().ToArray());
+
+            TransformarLista(nombres2, grande);
+            TransformarLista(nombres2, titulo);
+            TransformarLista(nombres2, invertir);
         }
 
         Console.WriteLine("\n-------------------------\n");
+        //EJERCICIOS LINQ
+        // Y aquí una lista de datos para que puedas probar tus consultas:
 
-        void TransformarLista(List<string> original, Func<string, string> reglaDeTransformacion)
+        List<Curso> cursos = new List<Curso>
+                {
+                    new Curso { Id = 1, NombreCurso = "Matemáticas" },
+                    new Curso { Id = 2, NombreCurso = "Historia" },
+                    new Curso { Id = 3, NombreCurso = "Programación" }
+                };
+
+                List<Alumnox> alumnos = new List<Alumnox>
+                {
+                    new Alumnox { Id = 1, Nom = "Ana", Nota = 90, IdCurso = 1 },
+                    new Alumnox { Id = 2, Nom = "Luis", Nota = 70, IdCurso = 3 },
+                    new Alumnox { Id = 3, Nom = "Carla", Nota = 88, IdCurso = 1 },
+                    new Alumnox { Id = 4, Nom = "Pedro", Nota = 65, IdCurso = 2 },
+                    new Alumnox { Id = 5, Nom = "Maria", Nota = 95, IdCurso = 3 },
+                    new Alumnox { Id = 6, Nom = "Juan", Nota = 40, IdCurso = 2 },
+                    new Alumnox { Id = 7, Nom = "Laura", Nota = 82, IdCurso = 1 },
+                    new Alumnox { Id = 8, Nom = "Miguel", Nota = 98, IdCurso = 3 }
+                };            
+
+     //1. Obtener todos los alumnos que aprobaron (nota >= 70).
+        var aprobados = alumnos.Where(a => a.Nota >= 70);
+
+        foreach(var alu in aprobados)
         {
-            List<string> new_list = new List<string>();
-            foreach (var item in original)
-            {
-                new_list.Add(reglaDeTransformacion(item));
-            }
-            Console.WriteLine($"Lista de modificada: {string.Join(", ", new_list)}");
+            Console.WriteLine($"APROBADOS: {alu.Nom}");
         }
-        List<string> nombres2 = new List<string> { "franco", "juan", "pedro", "maria" };
-        //mayuscula
-        var grande = (string s) => s.ToUpper();
 
-        //agregar sr.
-        var titulo = (string s) => $"Sr. {s}";
 
-        //dejar invertido
-        var invertir = (string s) => new string(s.Reverse().ToArray());
+     //2. Ordernar el nombre de los alumnos
+        var orden = from o in alumnos
+                    orderby o.Nom
+                    select o;
 
-        TransformarLista(nombres2, grande);
-        TransformarLista(nombres2, titulo);
-        TransformarLista(nombres2, invertir);
+        Console.WriteLine("\n-------------------------\n");
+        int ind = 0;
+        foreach (var alu in orden)
+        {
+            ind++;
+            Console.WriteLine($"n° de orden {ind} - {alu.Nom}");
+        }
 
+     //3. Sacar los nombres y guardarlos en una lista
+        List<string> elegidos = new List<string>();
+
+        var prospecto = alumnos.Select(a => a.Nom);
+
+        Console.WriteLine("\n-------------------------\n");
+        foreach (var alu in prospecto)
+        {
+            elegidos.Add(alu);
+        }
+
+        Console.WriteLine($"Elegidos: {string.Join(", ", prospecto)}");
+        Console.WriteLine("\n-------------------------\n");
+
+        //4. Ejercicio propio 
+        List<string> prospectoMayus = new List<string>(); //V1
+
+        foreach (var ALU in prospecto)
+        {
+            if (ALU.Contains("a"))
+            {
+                prospectoMayus.Add(ALU.ToUpper());
+            }
+            else { 
+            prospectoMayus.Add(ALU);
+            }   
+
+        }
+
+        Console.WriteLine($"lista nueva: {string.Join(", ", prospectoMayus)}");
+
+
+        //V2
+        var prospectoMayus2 = prospecto.Select(a => a.Contains("a") ? a.ToUpper() : a);
+        Console.WriteLine($"lista Nueva LINQ: {string.Join(", ", prospectoMayus2)}");
     }
 }
