@@ -12,3 +12,4 @@ C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\ob
 C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.pdb
 C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.genruntimeconfig.cache
 C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\ref\EjercicioBackEnd.dll
+C:\Users\juanc\OneDrive\Escritorio\programacion\C#\proyectos\EjercicioBackEnd\obj\Debug\net8.0\EjercicioBackEnd.sourcelink.json

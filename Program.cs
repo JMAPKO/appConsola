@@ -1,20 +1,9 @@
 ﻿
 
-/*using System;
-
-//Prueba
-var discipulo1 = new Alumno("Juan Manuel", 29, false, 2);*/
-
-/*Console.WriteLine($"{discipulo1.nombre} tiene  {discipulo1.mesesDePractica} Meses de Practica:");
-discipulo1.Entrenar();
-
-Console.WriteLine($"{discipulo1.nombre} tiene: {discipulo1.mesesDePractica} Meses de Practica");
-discipulo1.Entrenar();
-
-discipulo1.Graduacion();*/
-
-
 //Alumno
+using System.Dynamic;
+using System.Reflection.Metadata.Ecma335;
+
 public class Alumno : Iorientadores
 {
     public string Nombre { get; set; }
@@ -104,6 +93,30 @@ interface Iorientadores
     void Compensatorio() => Console.Write($" {Nombre} esta haciendo un compensatorio"); 
 }
 
+class Alumnos<T> where T : Alumno
+{
+    private List<T> _ListaAlumnos = new List<T>();
+
+    public int CantidadAlumnos { 
+        get { return _ListaAlumnos.Count; } 
+    }
+
+    public void AgregarAlumno(T alumno)
+    {
+        _ListaAlumnos.Add(alumno);
+        Console.WriteLine($"SE AGREGO {alumno.Nombre} a la lista");
+    }
+
+    public void GetAlumnos()
+    {
+        foreach (var alumno in _ListaAlumnos)
+        {
+           int index = _ListaAlumnos.IndexOf(alumno) + 1;
+            Console.WriteLine($" {index} - nombre: {alumno.Nombre} - {alumno.Edad}");
+        }
+    }
+}
+
 
 
 
@@ -130,5 +143,19 @@ public class Program
         intructor1.Enseñar();
         intructor1.Compensatorio();
         Console.WriteLine(intructor1.CompHechos);
+
+        //Lista de Alumnos
+        Console.WriteLine("\n-------------------------\n");
+        Console.WriteLine("INICIANDO SISTEMA DE ALUMNOS");
+
+        Alumnos<Alumno> listaAlumnos = new Alumnos<Alumno>();
+        listaAlumnos.AgregarAlumno(alumno1);
+        listaAlumnos.AgregarAlumno(intructor1);
+        Console.WriteLine("-----------");
+        listaAlumnos.GetAlumnos();
+        Console.WriteLine($"cantidad de alumnos: {listaAlumnos.CantidadAlumnos}");
+
+
+
     }
 }
