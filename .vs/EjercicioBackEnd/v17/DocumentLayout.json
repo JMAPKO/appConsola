@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9599A500-E029-4A57-9125-EA9F8F6CC70B}|EjercicioBackEnd.csproj|c:\\users\\juanc\\onedrive\\escritorio\\programacion\\c#\\proyectos\\ejerciciobackend\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{9599A500-E029-4A57-9125-EA9F8F6CC70B}|EjercicioBackEnd.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9599A500-E029-4A57-9125-EA9F8F6CC70B}|EjercicioBackEnd.csproj|c:\\users\\juanc\\onedrive\\escritorio\\programacion\\c#\\proyectos\\ejerciciobackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9599A500-E029-4A57-9125-EA9F8F6CC70B}|EjercicioBackEnd.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +10,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 123,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -23,25 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-16T04:55:53.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAwwLYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T21:46:17.571Z",
               "EditorCaption": ""

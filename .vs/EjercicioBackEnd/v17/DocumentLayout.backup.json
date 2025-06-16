@@ -10,7 +10,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 123,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\juanc\\OneDrive\\Escritorio\\programacion\\C#\\proyectos\\EjercicioBackEnd\\Program.cs*",
               "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAwwKkAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAwwLsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T21:46:17.571Z",
               "EditorCaption": ""

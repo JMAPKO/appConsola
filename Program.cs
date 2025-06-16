@@ -156,6 +156,32 @@ public class Program
         Console.WriteLine($"cantidad de alumnos: {listaAlumnos.CantidadAlumnos}");
 
 
+        //EJERCICIOS LAMBDAS
+        Console.WriteLine("\n-------------------------\n");
+
+        void Calculadora(Func<int, int, int> Calc, int numb1, int numb2)
+        {
+            var result = Calc(numb1, numb2);
+            Console.WriteLine($"El resultado de la operacion es: {result}");
+        }
+
+        Calculadora((a, b) => a + b, 10, 5);
+        Calculadora((a, b) => a - b, 100, 20);
+        Calculadora((a, b) => a * b, 7, 8);
+        Console.WriteLine("\n-------------------------\n");
+
+        void CambiarNombres(Func<List<string>, List<string>> fn, List<string> list)
+        {
+            var mayuscula = fn(list);
+            Console.WriteLine($"Los nombres en mayuscula son: {string.Join(",", mayuscula)}");
+        }
+
+        List<string> nombres = new List<string> { "franco", "juan", "pedro", "maria" };
+        
+        var Mayus = (List<string> list) =>  list.Select(m => m.ToUpper()).ToList();
+
+        CambiarNombres(Mayus, nombres);
+
 
     }
 }
