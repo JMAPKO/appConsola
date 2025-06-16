@@ -170,18 +170,45 @@ public class Program
         Calculadora((a, b) => a * b, 7, 8);
         Console.WriteLine("\n-------------------------\n");
 
-        void CambiarNombres(Func<List<string>, List<string>> fn, List<string> list)
         {
-            var mayuscula = fn(list);
-            Console.WriteLine($"Los nombres en mayuscula son: {string.Join(",", mayuscula)}");
+
+            void CambiarNombres(Func<List<string>, List<string>> fn, List<string> list)
+            {
+                var mayuscula = fn(list);
+                Console.WriteLine($"Los nombres en mayuscula son: {string.Join(",", mayuscula)}");
+            }
+
+            List<string> nombres = new List<string> { "franco", "juan", "pedro", "maria" };
+
+            var Mayus = (List<string> list) => list.Select(m => m.ToUpper()).ToList();
+
+            CambiarNombres(Mayus, nombres);
         }
 
-        List<string> nombres = new List<string> { "franco", "juan", "pedro", "maria" };
-        
-        var Mayus = (List<string> list) =>  list.Select(m => m.ToUpper()).ToList();
+        Console.WriteLine("\n-------------------------\n");
 
-        CambiarNombres(Mayus, nombres);
+        void TransformarLista(List<string> original, Func<string, string> reglaDeTransformacion)
+        {
+            List<string> new_list = new List<string>();
+            foreach (var item in original)
+            {
+                new_list.Add(reglaDeTransformacion(item));
+            }
+            Console.WriteLine($"Lista de modificada: {string.Join(", ", new_list)}");
+        }
+        List<string> nombres2 = new List<string> { "franco", "juan", "pedro", "maria" };
+        //mayuscula
+        var grande = (string s) => s.ToUpper();
 
+        //agregar sr.
+        var titulo = (string s) => $"Sr. {s}";
+
+        //dejar invertido
+        var invertir = (string s) => new string(s.Reverse().ToArray());
+
+        TransformarLista(nombres2, grande);
+        TransformarLista(nombres2, titulo);
+        TransformarLista(nombres2, invertir);
 
     }
 }
